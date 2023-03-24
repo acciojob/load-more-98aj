@@ -35,10 +35,21 @@ const items = [
   "Item 30"
 ];
 
+function loder(){
+  let dip = document.getElementById("display")
+  for (const iterator of items) {
+    dip.innerHTML += `<p>${iterator}</p>`
+  }
+}
+
 const App = () => {
   return (
     <div>
         {/* Do not remove the main div */}
+    <div id="display"></div>
+    <button onClick={loder}>
+      Load more
+    </button>
     </div>
   )
 }
