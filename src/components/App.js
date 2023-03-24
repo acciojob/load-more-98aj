@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, {useState} from "react";
 import './../styles/App.css';
 
 const items = [
@@ -35,14 +35,19 @@ const items = [
   "Item 30"
 ];
 
+const[noEle, setNoEle]= useState(0);
+const slice = items.slice(0, noEle)
+
 function loder(){
   let dip = document.getElementById("display")
-  for (const iterator of items) {
+  for (const iterator of slice ) {
     dip.innerHTML += `<li>${iterator}</li>`
   }
+  setNoEle(noEle+10);
 }
 
 const App = () => {
+  
   return (
     <div>
         {/* Do not remove the main div */}
