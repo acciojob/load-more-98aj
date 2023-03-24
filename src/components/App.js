@@ -38,7 +38,7 @@ const items = [
 function loder(){
   let dip = document.getElementById("display")
   for (const iterator of items) {
-    dip.innerHTML += `<p>${iterator}</p>`
+    dip.innerHTML += `<li>${iterator}</li>`
   }
 }
 
@@ -46,7 +46,7 @@ const App = () => {
   return (
     <div>
         {/* Do not remove the main div */}
-    <div id="display"></div>
+    <ul id="display"></ul>
     <button onClick={loder}>
       Load more
     </button>
