@@ -1,7 +1,7 @@
 
 import React from "react";
 import './../styles/App.css';
-import Loder form './components/Loder';
+import Loder form './Loder';
 
 
 const App = () => {
