@@ -36,11 +36,12 @@ const items = [
   const slice = items.slice(0, noEle)
   
   function loder(){
+    setNoEle(noEle+10);
     let dip = document.getElementById("display")
     for (const iterator of slice ) {
       dip.innerHTML += `<li>${iterator}</li>`
     }
-    setNoEle(noEle+10);
+    
   }
   
 
